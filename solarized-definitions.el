@@ -231,13 +231,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (shadow (,@fg-base01))
                 (link (,@fmt-undr ,@fg-blue))    ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
-                (match (,@fmt-revr ,@fg-yellow))   ; Search
+                (match (,@fg-base03 ,@bg-yellow))   ; Search
                 (error (,@fmt-revr ,@fg-red))      ; ErrorMsg
                 (warning (,@fmt-bold ,@fg-red))    ; WarningMsg
                 (success (,@fg-blue))              ; MoreMsg
                 (escape-glyph-face (,@fg-red))
                 (fringe (,@fg-base01 ,@bg-base02))
                 (linum (,@fg-base01 ,@bg-base02))
+                (linum-relative-current-face (,@fg-base0 ,@bg-base03))
                 (header-line (,@fg-base0 ,@bg-base02 ,@fmt-revbb)) ; Pmenu
                 (highlight (,@bg-base02))
                 (hl-line (:underline ,opt-under ,@bg-base02)) ; CursorLine
@@ -773,6 +774,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (php-annotations-annotation-face (,@fg-base0 ,@fmt-bold))
                 (font-lock-function-name-face (,@fg-orange))
                 (font-lock-variable-name-face (,@fg-blue))
+                ;; highlight-chars
+                (hc-highlight-trailing-whitespace (,@fg-base03 ,@bg-yellow))
+                (hc-highlight-tabs (,@fg-base03 ,@bg-yellow))
                 ;; undo-tree
                 (undo-tree-visualizer-current-face (,@fg-orange))
                 (undo-tree-visualizer-default-face (:inherit shadow))
