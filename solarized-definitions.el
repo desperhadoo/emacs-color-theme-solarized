@@ -215,8 +215,6 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
           ;; FIXME: don’t hardcode the SRGB color names
           (fmt-curl-red    `(                        :underline (:color "#dc322f" :style wave)))
           (fmt-curl-yellow `(                        :underline (:color "#b58900" :style wave)))
-          (fmt-curl-magenta `(                       :underline (:color "#d33682" :style wave)))
-          (fmt-curl-cyan `(                          :underline (:color "#2aa198" :style wave)))
           (fmt-ital   `(              :slant ,italic))
           ;; FIXME: not quite the same
           (fmt-stnd   `(                                                   :inverse-video t))
@@ -231,7 +229,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (default (,@fg-base0 ,@bg-back))   ; Normal
                 (cursor (,@fg-base03 ,@bg-base0))  ; Cursor
                 (shadow (,@fg-base01))
-                (link (,@fmt-undr ,@fg-violet))    ; Underlined
+                (link (,@fmt-undr ,@fg-blue))    ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
                 (match (,@fmt-revr ,@fg-yellow))   ; Search
                 (error (,@fmt-revr ,@fg-red))      ; ErrorMsg
@@ -249,14 +247,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (menu (,@fg-base0 ,@bg-base02))
                 (minibuffer-prompt (,@fmt-bold ,@fg-cyan)) ; Question
                 (mode-line ; StatusLine
-                 (,@fg-base1 ,@bg-base02 ,@fmt-revbb :box nil))
+                 (,@fg-base1 ,@bg-base02))
                 (mode-line-inactive    ; StatusLineNC
-                 (,@fg-base00 ,@bg-base02 ,@fmt-revbb :box nil))
+                 (,@fg-base00 ,@bg-base02))
                 (region (,@fg-base01 ,@bg-base03 ,@fmt-revbb)) ; Visual
                 (secondary-selection (,@bg-base02))
                 (shadow (,@fg-base01))
                 (trailing-whitespace (,@fmt-revr ,@fg-red))
-                (vertical-border (,@fg-base0))
+                (vertical-border (,@fg-base02))
                 ;; comint
                 (comint-highlight-prompt (,@fg-blue))
                 ;; compilation
@@ -363,9 +361,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; org
                 (org-block-background (,@bg-base02))
                 (org-hide (,@fg-base03))
-                (org-todo (,@fmt-bold ,@fg-base03 ,@bg-red))
+                (org-todo (,@fmt-bold ,@fg-red))
                 (org-done (,@fmt-bold ,@fg-green))
-                (org-todo-kwd-face (,@fmt-bold ,@fg-base03 ,@bg-red))
+                (org-todo-kwd-face (,@fmt-bold ,@fg-red))
                 (org-done-kwd-face (,@fmt-bold ,@fg-green))
                 (org-project-kwd-face (,@fg-violet ,@bg-base03))
                 (org-waiting-kwd-face (,@fg-orange ,@bg-base03))
@@ -388,7 +386,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (org-column-title (,@fmt-bold ,@fmt-revr))
                 (org-warning (,@fmt-bold ,@fg-red))
                 (org-archived (,@fg-base01))
-                (org-link (,@fmt-undr ,@fg-violet))
+                (org-link (,@fmt-undr ,@fg-blue))
                 (org-footnote (,@fmt-undr ,@fg-violet))
                 (org-ellipses (,@fg-yellow :strike-through t) )
                 (org-target (,@fmt-undr))
@@ -430,8 +428,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (outline-7 (,@fg-orange))
                 (outline-8 (,@fg-violet))
                 ;; show-paren - MatchParen
-                (show-paren-match (,@fmt-bold ,@fg-cyan ,@bg-base02))
-                (show-paren-mismatch (,@fmt-bold ,@fg-red ,@bg-base01))
+                (show-paren-match (,@fmt-bold ,@fg-base03 ,@bg-yellow))
+                (show-paren-mismatch (,@fmt-bold ,@fg-base03 ,@bg-red))
                 ;; speedbar
                 ;; (speedbar-button-face (,@fmt-none ,@fg-base1))
                 (speedbar-button-face
@@ -496,7 +494,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (jabber-roster-user-online (,@fmt-bold ,@fg-blue))
                 (jabber-roster-user-xa (,@fmt-ital ,@fg-magenta))
                 ;; git-gutter
-                (git-gutter:modified (,@fg-violet))
+                (git-gutter:modified (,@fg-blue))
                 (git-gutter:added (,@fg-green))
                 (git-gutter:deleted (,@fg-red))
                 ;; gnus - these are mostly taken from mutt, not VIM
@@ -702,11 +700,6 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (whitespace-trailing (,@fmt-bold ,@fg-red ,@bg-base02))
                 (whitespace-highlight-face (,@fg-red ,@bg-blue))
                 (whitespace-line (,@fg-magenta))
-                (whitespace-newline (:inherit shadow :slant normal))
-                ;; writegood
-                (writegood-weasels-face (,@fmt-curl-cyan ,@fg-cyan))
-                (writegood-passive-voice-face (,@fg-magenta))
-                (writegood-duplicates-face (:inherit error))
                 ;; rcirc
                 (rcirc-my-nick (,@fg-blue))
                 (rcirc-nick-in-message (,@fg-orange))
@@ -729,14 +722,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (rst-level-5 (:inherit outline-5))
                 (rst-level-6 (:inherit outline-6))
                 ;;ansi-term
-                (term-color-black (,@fg-base02 ,@bg-base02))
-                (term-color-red (,@fg-red ,@bg-red))
-                (term-color-green (,@fg-green ,@bg-green))
-                (term-color-yellow (,@fg-yellow ,@bg-yellow))
-                (term-color-blue (,@fg-blue ,@bg-blue))
-                (term-color-magenta (,@fg-magenta ,@bg-magenta))
-                (term-color-cyan (,@fg-cyan ,@bg-cyan))
-                (term-color-white (,@fg-base00 ,@bg-base00))
+                (term-color-black (,@fg-base02))
+                (term-color-red (,@fg-red))
+                (term-color-green (,@fg-green))
+                (term-color-yellow (,@fg-yellow))
+                (term-color-blue (,@fg-blue))
+                (term-color-magenta (,@fg-magenta))
+                (term-color-cyan (,@fg-cyan))
+                (term-color-white (,@fg-base00))
                 ;; company
                 (company-tooltip (,@fg-base00 ,@bg-base02))
                 (company-tooltip-selection (,@fg-green ,@bg-base02))
@@ -770,14 +763,22 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (magit-log-head-label-head (,@fg-violet))
                 (magit-process-ok (,@fg-green :inherit magit-section-title))
                 (magit-process-ng (,@fg-red :inherit magit-section-title))
+                ;; code
+                (js2-function-param (,@fg-blue))
+                (js2-object-property (,@fg-yellow))
+                (js2-jsdoc-tag (,@fg-base0 ,@fmt-bold))
+                (js2-jsdoc-type (,@fg-orange))
+                (js2-jsdoc-value (,@fg-blue))
+                (js2-function-call (,@fg-orange))
+                (php-annotations-annotation-face (,@fg-base0 ,@fmt-bold))
+                (font-lock-function-name-face (,@fg-orange))
+                (font-lock-variable-name-face (,@fg-blue))
                 ;; undo-tree
                 (undo-tree-visualizer-current-face (,@fg-orange))
                 (undo-tree-visualizer-default-face (:inherit shadow))
                 (undo-tree-visualizer-active-branch-face (:inherit default))
                 (undo-tree-visualizer-unmodified-face (,@fg-cyan))
-                (undo-tree-visualizer-register-face (,@fg-yellow))
-                ;; haskell
-                (haskell-keyword-face (,@fg-cyan)))))))
+                (undo-tree-visualizer-register-face (,@fg-yellow)))))))
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)
