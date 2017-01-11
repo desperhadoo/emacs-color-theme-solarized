@@ -232,6 +232,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (link (,@fmt-undr ,@fg-blue))    ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
                 (match (,@fg-base03 ,@bg-yellow))   ; Search
+                (evil-search-highlight-persist-highlight-face (,@fg-base03 ,@bg-base01))
                 (error (,@fmt-revr ,@fg-red))      ; ErrorMsg
                 (warning (,@fmt-bold ,@fg-red))    ; WarningMsg
                 (success (,@fg-blue))              ; MoreMsg
