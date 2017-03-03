@@ -775,6 +775,13 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (php-annotations-annotation-face (,@fg-base0 ,@fmt-bold))
                 (font-lock-function-name-face (,@fg-orange))
                 (font-lock-variable-name-face (,@fg-blue))
+                (web-mode-current-column-highlight-face (,@bg-base02))
+                (web-mode-html-tag-bracket-face (,@fg-blue))
+                (web-mode-html-tag-face (,@fg-blue))
+                (web-mode-current-element-highlight-face (,@fg-yellow))
+                (web-mode-html-attr-name-face (,@fg-red))
+                (web-mode-html-attr-equal-face (,@fg-red))
+                (web-mode-html-attr-value-face (,@fg-cyan))
                 ;; highlight-chars
                 (hc-highlight-trailing-whitespace (,@fg-base03 ,@bg-yellow))
                 (hc-highlight-tabs (,@fg-base03 ,@bg-yellow))
