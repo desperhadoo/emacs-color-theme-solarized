@@ -783,8 +783,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (web-mode-html-attr-equal-face (,@fg-red))
                 (web-mode-html-attr-value-face (,@fg-cyan))
                 ;; highlight-chars
-                (hc-highlight-trailing-whitespace (,@fg-base03 ,@bg-yellow))
-                (hc-highlight-tabs (,@fg-base03 ,@bg-yellow))
+                (hc-trailing-whitespace (,@fg-base03 ,@bg-red))
+                (hc-tab (,@fg-base03 ,@bg-red))
                 ;; undo-tree
                 (undo-tree-visualizer-current-face (,@fg-orange))
                 (undo-tree-visualizer-default-face (:inherit shadow))
