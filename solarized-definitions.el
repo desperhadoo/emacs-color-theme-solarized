@@ -785,6 +785,12 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; highlight-chars
                 (hc-trailing-whitespace (,@fg-base03 ,@bg-red))
                 (hc-tab (,@fg-base03 ,@bg-red))
+                ;; blank-mode
+                (whitespace-space (,@fg-base02))
+                (whitespace-hspace (,@fg-base02))
+                (whitespace-tabs (,@fg-base01))
+                (whitespace-newline (,@fg-base01))
+                (whitespace-trailing (,@fg-base01 ,@bg-red))
                 ;; undo-tree
                 (undo-tree-visualizer-current-face (,@fg-orange))
                 (undo-tree-visualizer-default-face (:inherit shadow))
