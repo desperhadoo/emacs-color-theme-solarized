@@ -470,6 +470,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; bm visual bookmarks
                 (bm-fringe-face (,@bg-orange ,@fg-base03))
                 (bm-fringe-persistent-face (,@bg-blue ,@fg-base03))
+                (bm-face (,@bg-base01 ,@fg-base03))
+                (bm-persistent-face (,@bg-base01 ,@fg-base03))
                 ;; Flymake
                 (flymake-errline (,@fmt-bold ,@fg-red)) ; Error
                 (flymake-warnline (,@fmt-bold ,@fg-red))
