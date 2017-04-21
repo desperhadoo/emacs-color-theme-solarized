@@ -785,7 +785,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; highlight-chars
                 (hc-trailing-whitespace (,@fg-base03 ,@bg-red))
                 (hc-tab (,@fg-base03 ,@bg-red))
-                ;; blank-mode
+                ;; whitespaces
                 (whitespace-space (,@fg-base02))
                 (whitespace-hspace (,@fg-base02))
                 (whitespace-tabs (,@fg-base01))
