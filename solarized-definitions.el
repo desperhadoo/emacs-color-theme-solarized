@@ -695,15 +695,16 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (sp-show-pair-mismatch-face (,@bg-red ,@fg-base02))
                 ;; whitespace
                 (whitespace-empty (,@fg-red))
-                (whitespace-hspace (,@fg-orange))
                 (whitespace-indentation (,@fg-base02))
-                (whitespace-space (,@fg-base02))
                 (whitespace-space-after-tab (,@fg-cyan))
                 (whitespace-space-before-tab (,@fmt-bold ,@fg-red))
-                (whitespace-tab (,@fg-base02))
-                (whitespace-trailing (,@fmt-bold ,@fg-red ,@bg-base02))
                 (whitespace-highlight-face (,@fg-red ,@bg-blue))
                 (whitespace-line (,@fg-magenta))
+                (whitespace-space (,@fg-base02))
+                (whitespace-hspace (,@fg-base02))
+                (whitespace-tab (,@fg-base01))
+                (whitespace-newline (,@fg-base01))
+                (whitespace-trailing (,@fmt-bold ,@fg-red ,@bg-base03))
                 ;; rcirc
                 (rcirc-my-nick (,@fg-blue))
                 (rcirc-nick-in-message (,@fg-orange))
@@ -785,14 +786,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (web-mode-html-attr-equal-face (,@fg-red))
                 (web-mode-html-attr-value-face (,@fg-cyan))
                 ;; highlight-chars
-                (hc-trailing-whitespace (,@fg-base03 ,@bg-red))
-                (hc-tab (,@fg-base03 ,@bg-red))
-                ;; whitespaces
-                (whitespace-space (,@fg-base02))
-                (whitespace-hspace (,@fg-base02))
-                (whitespace-tabs (,@fg-base01))
-                (whitespace-newline (,@fg-base01))
-                (whitespace-trailing (,@fg-base01 ,@bg-red))
+                ;; (hc-trailing-whitespace (,@fg-base03 ,@bg-red))
+                ;; (hc-tab (,@fg-base03 ,@bg-red))
                 ;; undo-tree
                 (undo-tree-visualizer-current-face (,@fg-orange))
                 (undo-tree-visualizer-default-face (:inherit shadow))
