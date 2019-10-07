@@ -240,6 +240,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (fringe (,@fg-base01 ,@bg-base02))
                 (linum (,@fg-base01 ,@bg-base02))
                 (linum-relative-current-face (,@fg-base0 ,@bg-base03))
+                (line-number (,@fg-base01 ,@bg-base02))
+                (line-number-current-line (,@fg-base0 ,@bg-base03))
                 (header-line (,@fg-base0 ,@bg-base02 ,@fmt-revbb)) ; Pmenu
                 (highlight (,@bg-base02))
                 (hl-line (:underline ,opt-under ,@bg-base02)) ; CursorLine
@@ -785,6 +787,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (web-mode-html-attr-name-face (,@fg-red))
                 (web-mode-html-attr-equal-face (,@fg-red))
                 (web-mode-html-attr-value-face (,@fg-cyan))
+                (ein:cell-input-area (,@bg-back))
                 ;; highlight-chars
                 ;; (hc-trailing-whitespace (,@fg-base03 ,@bg-red))
                 ;; (hc-tab (,@fg-base03 ,@bg-red))
