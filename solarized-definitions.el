@@ -335,18 +335,18 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; font-lock
                 (font-lock-builtin-face (,@fmt-none ,@fg-green)) ; Statement
                 (font-lock-comment-face (,@fmt-ital ,@fg-base01)) ; Comment
-                (font-lock-constant-face (,@fmt-none ,@fg-cyan)) ; Constant
-                (font-lock-function-name-face ; Identifier
-                 (,@fmt-none ,@fg-blue))
-                (font-lock-keyword-face (,@fmt-none ,@fg-green)) ; Statement
+                (font-lock-constant-face (,@fmt-none ,@fg-blue)) ; Constant
+                ;; (font-lock-function-name-face ; Identifier
+                ;;  (,@fmt-none ,@fg-blue))
+                ;; (font-lock-keyword-face (,@fmt-none ,@fg-green)) ; Statement
                 (font-lock-string-face (,@fmt-none ,@fg-cyan)) ; Constant
                 (font-lock-type-face (,@fmt-none ,@fg-yellow)) ; Type
-                (font-lock-variable-name-face ; Identifier
-                 (,@fmt-none ,@fg-blue))
+                ;; (font-lock-variable-name-face ; Identifier
+                ;;  (,@fmt-none ,@fg-blue))
                 (font-lock-warning-face (,@fmt-bold ,@fg-red)) ; Error
                 (font-lock-doc-face (,@fmt-ital ,@fg-base01)) ; Comment
-                (font-lock-doc-string-face ; Comment (XEmacs-only)
-                 (,@fmt-ital ,@fg-base01))
+                ;; (font-lock-doc-string-face ; Comment (XEmacs-only)
+                ;;  (,@fmt-ital ,@fg-base01))
                 (font-lock-color-constant-face (,@fmt-none ,@fg-green))
                 (font-lock-comment-delimiter-face ; Comment
                  (,@fmt-ital ,@fg-base01))
@@ -770,16 +770,47 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (magit-log-head-label-head (,@fg-violet))
                 (magit-process-ok (,@fg-green :inherit magit-section-title))
                 (magit-process-ng (,@fg-red :inherit magit-section-title))
+                (magit-diff-context (,@bg-base03 ,@fg-base0))
+                (magit-diff-context-highlight (,@bg-base03 ,@fg-base0))
+                (magit-diff-added (,@bg-base03 ,@fg-cyan))
+                (magit-diff-added-highlight (,@bg-base02 ,@fg-cyan))
+                (magit-diff-removed (,@bg-base03 ,@fg-red))
+                (magit-diff-removed-highlight (,@bg-base02 ,@fg-red))
+                (magit-diff-file-heading (,@bg-base01 ,@fg-base02))
+                (magit-diff-file-heading-highlight (,@bg-base00 ,@fg-base02))
+                (magit-diff-hunk-heading (,@bg-base01 ,@fg-base02))
+                (magit-diff-hunk-heading-highlight (,@bg-base0 ,@fg-base02))
+                (magit-diff-hunk-heading-selection (,@bg-base0 ,@fg-base02))
+                (magit-section-heading (,@bg-base03 ,@fg-yellow))
+                (magit-section-highlight (,@bg-base00 ,@fg-base02))
+                (magit-hash (,@fg-orange))
+                (magit-file-name (,@bg-base02 ,@fg-base0))
+                (magit-branch-current (,@fg-cyan))
+                (magit-branch-local (,@fg-cyan))
+                (magit-branch-remote (,@fg-green))
+                (magit-tag (,@fg-magenta))
                 ;; code
-                (js2-function-param (,@fg-blue))
-                (js2-object-property (,@fg-yellow))
-                (js2-jsdoc-tag (,@fg-base0 ,@fmt-bold))
-                (js2-jsdoc-type (,@fg-orange))
-                (js2-jsdoc-value (,@fg-blue))
-                (js2-function-call (,@fg-orange))
-                (php-annotations-annotation-face (,@fg-base0 ,@fmt-bold))
-                (font-lock-function-name-face (,@fg-orange))
-                (font-lock-variable-name-face (,@fg-blue))
+                (js2-function-param (,@fg-green))
+                (js2-object-property (,@fg-green))
+                (js2-jsdoc-tag (,@fg-base0))
+                (js2-jsdoc-type (,@fg-yellow))
+                (js2-jsdoc-value (,@fg-green))
+                (js2-function-call (,@fg-yellow))
+                (php-annotations-annotation-face (,@fg-base0))
+                (php-property-name (,@fg-yellow))
+                (php-variable-name (,@fg-green))
+                (php-keyword (,@fg-red))
+                (php-constant (,@fg-blue))
+                (php-function-name (,@fg-yellow))
+                (php-static-method-call (,@fg-yellow))
+                (php-method-call (,@fg-yellow))
+                (php-string (,@fg-cyan))
+                (php-this (,@fg-blue))
+                (font-lock-doc-face (,@fg-yellow))
+                (font-lock-keyword-face (,@fg-red))
+                (font-lock-function-name-face (,@fg-yellow))
+                (font-lock-variable-name-face (,@fg-green))
+                (font-lock-type-face (,@fg-red))
                 (web-mode-current-column-highlight-face (,@bg-base02))
                 (web-mode-html-tag-bracket-face (,@fg-blue))
                 (web-mode-html-tag-face (,@fg-blue))
