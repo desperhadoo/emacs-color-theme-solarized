@@ -819,7 +819,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (web-mode-html-attr-equal-face (,@fg-red))
                 (web-mode-html-attr-value-face (,@fg-cyan))
                 (ein:cell-input-area (,@bg-back))
-                (terraform--resource-name-face (,@fg-red))
+                (terraform--resource-name-face (,@fg-yellow))
+                (terraform--resource-type-face (,@fg-red))
                 ;; highlight-chars
                 ;; (hc-trailing-whitespace (,@fg-base03 ,@bg-red))
                 ;; (hc-tab (,@fg-base03 ,@bg-red))
